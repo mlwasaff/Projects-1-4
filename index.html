@@ -1,75 +1,281 @@
 <!DOCTYPE html >
 <html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Instacrart Website">
+    <meta name="author" content="Madison Wasaff">
+
     <title>Instacart</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,600&display=swap" rel="stylesheet">
+
+   <!-- Bootstrap v5.3.8 -->
+   <!-- LOAD BOOTSTRAP CSS - DO NOT DELETE -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+   <!-- END LOADING BOOTSTRAP CSS -->
 
     <!--
     AI Use Disclosure:
     Tool(s): ChatGPT (free version)
     Purpose: Helped explain how to align my top navigation section
-    Human Role: I applied the explanation to my project, added the suggested code, and modified the code to work on my page. -->
+    Human Role: I applied the explanation to my project, added the suggested code, and modified the code to work on my page. 
+
+    Codex (free version)
+    Purpose: Helped clean up my design, add padding and margins, modified the code to improve my overall page layout, and helped me combine the scrolling nav with my pre-existing nav bar while keeping it fixed at the top -->
+
   </head>
 
-<body>
-  <header class="top-bar">
-    <img src="photos/logo.png" alt="logo" class="logo" style="width:50px;height:50px;">
-
-    <h1>instacart</h1>
-
-    <textarea class="search">Search products and stores</textarea>
-
-    <div class="auth-buttons">
-      <button class="button1">Log in</button>
-      <button class="button3">Sign up</button>
+<!-- Sticky Header-->
+  <header class="top-bar" id="mainNav">
+    <div class="brand">
+      <img src="photos/logo.png" alt="logo" class="logo">
+      <h1 class="fw-bolder">instacart</h1>
+    </div>
+    <input class="search" type="search" placeholder="Search products and stores" aria-label="Search products and stores">
+    <div class="top-right">
+      <nav class="top-links" aria-label="Primary">
+        <a href="#Order">Order</a>
+        <a href="#Stores">Stores</a>
+        <a href="#Help">Help</a>
+      </nav>
+      <div class="auth-buttons">
+        <a class="button1" href="https://www.instacart.com/" target="_blank" rel="noopener noreferrer">Log in</a>
+        <a class="button3" href="https://www.instacart.com/" target="_blank" rel="noopener noreferrer">Sign up</a>
+      </div>
     </div>
   </header>
 
-<div class="banner">
-  <h2 class="h2">Order groceries for delivery or pickup today</h2>
-  <a href="https://www.instacart.com/" 
-   target="_blank" 
-   class="button2">
-   Sign up to get $0 delivery fee*
-  </a>
-  <br>
+<!--Order/signup-->
+<section id="Order">
+  <div class="row gx-4 justify-content-center">
+  <div class="banner">
+    <h2 class="h2">Order groceries for delivery or pickup today</h2>
+      <a href="https://www.instacart.com/" target="_blank" class="button2">Sign up to get $0 delivery fee*</a>
+      <br>
+    <p class="p">*Valid for the first 3 orders. Service fees and terms apply</p>
+    <img src="photos/banner.png" alt="fruits and vegetables">
+  </div>
+  </div>
+</section>
 
-  <p class="p">*Valid for the first 3 orders. Service fees and terms apply</p>
-
-  <img src="photos/banner.png" alt="fruits and vegetables" style="width:700px;height:250px;">
-</div>
-
+<!--Stores-->
+<section id="Stores">
 <div class="store-icons">
   <h3 class="h3">Stores to help you save</h3>
-    <img src="photos/foodlion.png" alt="Food Lion" style="width:120px;height:100px;">
-    <img src="photos/kroger.png" alt="Kroger" style="width:120px;height:100px;">
-    <img src="photos/costco.png" alt="Costco" style="width:120px;height:100px;">
-    <img src="photos/aldi.png" alt="Aldi" style="width:120px;height:100px;">
-    <img src="photos/cvs.png" alt="Cvs" style="width:120px;height:100px;">
+  <div class="image-flex-container">
+    <img src="photos/stores.png" alt="Stores">
+  </div>
 </div>
+</section>
+
 
 <h4 class="h4">All stores in Harrisonburg, VA</h4>
+  <div class="sort"><button>All</button><button>Fastest</button><button>EBT</button><button>Offers</button><button>Low prices</button><button>Grocery</button><button>Pickup</button></div>
+
+<section id="cards">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="photos/foodlion.png" class="card-img-top" alt="FoodLion">
+        <div class="card-body">
+          <h5 class="card-title">Food Lion</h5>
+          <p class="card-text">1.0 mi<br>Pickup Available<br>Groceries * Bakery * Deli</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="photos/martins.png" class="card-img-top" alt="MARTIN'S">
+          <div class="card-body">
+          <h5 class="card-title">MARTIN'S</h5>
+          <p class="card-text">2.0 mi<br>Pickup Available<br>Groceries * Bakery * Deli</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="photos/aldi.jpg" class="card-img-top" alt="Aldi">
+        <div class="card-body">
+          <h5 class="card-title">Aldi</h5>
+          <p class="card-text">1.5 mi<br>Delivery Available<br>Groceries * Produce * Organic</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="photos/target.jpg" class="card-img-top" alt="Target">
+          <div class="card-body">
+          <h5 class="card-title">Target</h5>
+          <p class="card-text">2.0 mi<br>Pickup Available<br>Groceries * Convinience * Home</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="photos/kroger.png" class="card-img-top" alt="Kroger">
+        <div class="card-body">
+          <h5 class="card-title">Kroger</h5>
+          <p class="card-text">1.5 mi<br>Pickup Available<br>Groceries * Bakery * Deli</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="photos/costco.png" class="card-img-bottom" alt="Costco">
+        <div class="card-body">
+          <h5 class="card-title">Costco</h5>
+          <p class="card-text">0.5 mi<br>Pick up only<br>Groceries * Bakery * Home</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Common Questions-->
+<section id="Help">
+  <div class="container px-4">
+    <div class="row gx-4 justify-content-center">
+      <div class="col-lg-8">
+        <h2>Common Questions</h2>
+          <div class="accordion" id="accordionHelp">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                How does Instacart delivery and curbside pickup work?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>Instacart makes it easy to order from your favorite stores. Shop for items from stores near you, with a selection of more than 500 retailers and trusted local grocers across North America. Then, Instacart will connect you with a personal shopper in your area to shop and deliver your order. Contactless delivery is available with our “Leave at my door” option.</p>
+
+                <p>You can track your order’s progress and communicate with your shopper every step of the way using the Instacart app or website.</p>
+
+                <p>Instacart also offers curbside pickup at select retail locations. Simply place your order and choose a pickup time, and a shopper will prepare your order at the store.</p>
+
+                <p>When you get to the store, use the Instacart app to notify us. Depending on the store, a shopper or store employee will bring the groceries to your car, or you can pick them up at the designated area.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                How much does Instacart cost?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>You don’t need a membership to order with Instacart. In fact, you can even order from warehouse clubs, like Costco, Sam’s Club, and BJ’s Wholesale Club, without a retailer club membership.</p>
+
+                <p>To get started, create an account, select the store you want to shop, and place your order. New customers may be eligible for $0 delivery fee* promotions. (*Service fees apply)</p>
+
+                <p>Delivery: Fees start at $3.99 for same-day orders over $35. Fees vary for one-hour deliveries, club store deliveries, and deliveries under $35.</p>
+
+                <p>Pickup: There may be a “pickup fee” (equivalent to a delivery fee for pickup orders) on your pick up order.</p>
+
+                <p>Service fees: Service fees vary and are subject to change based on factors like location and the number and types of items in your cart. Orders containing alcohol have a separate service fee.</p>
+
+                <p>With an optional Instacart+ membership, you can get $0 delivery fee* on every order over $35. *Service fees apply.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Will I pay the same price on Instacart as I would in store?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>Retail partners set the prices of items on the Instacart marketplace. While many retailers offer everyday store prices on Instacart, some retailers may set prices on the Instacart platform that are different from in-store prices.</p>
+
+                <p>You can view pricing policies for each retailer on the Instacart app and website.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                What happens if something is out of stock and I need to give specific instructions?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>Instacart makes it easy to communicate with your shopper. When an item you want is out-of-stock at the store, your shopper will follow your replacement preferences.</p>
+
+                <p>You can set item and delivery instructions in advance, as well as chat directly with your shopper while they shop and deliver your items. You can tell the shopper to:</p>
+                <ul>
+                  <li>Find Best Match: By default, your shopper will use their best judgement to pick a replacement for your item.</li>
+                  <li>Pick Specific Replacement: You can pick a specific alternative for the shopper to purchase if your first choice is out-of-stock.</li>
+                  <li>Don’t Replace: For items you’d rather not replace, choose “Don’t replace” to get a refund if the item is out of stock.</li>
+                  <li>You can update or cancel your order as long as your shopper hasn’t started shopping. If you need to make changes after shopping has started, you can use the app or website to approve replacements or chat with your shopper.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                What happens if there's an issue with my order?              
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>If something isn’t right, you’ve got options. In the Instacart app or website, you can report:</p>
+
+                <ul>
+                  <li>Missing items</li>
+                  <li>Incorrect items</li>
+                  <li>Damaged items</li>
+                  <li>Poor replacements</li>
+                  <li>Early/late orders</li>
+                </ul>
+                <p>If an order never came, or you get someone else’s order, you can reach out to Instacart Customer Experience.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                Can I get contactless delivery with Instacart?
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>The health and safety of our community is our number one priority. We are excited to offer contactless delivery through our Leave at My Door delivery feature.</p>
+
+                <p>Leave at My Door delivery gives you the flexibility to have your groceries delivered without having to come to the door or be at home. You can leave delivery instructions for your shopper at checkout, and we’ll notify you when your order arrives.</p>
+
+                <p>Leave at My Door is now the default setting for all Instacart deliveries. If you’d prefer to not use this feature, simply uncheck the box that says “Leave at my door if I’m not around” at checkout.</p>
+
+                <p>Customers who order alcohol, prescriptions, or certain high-value items may need to show ID upon delivery. We ask shoppers to wear masks whenever they come into contact with customers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-<div class="sort"><button>All</button><button>Fastest</button><button>EBT</button><button>Offers</button><button>Low prices</button><button>Grocery</button><button>Pickup</button></div>
+<!-- Footer-->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-icons" aria-label="Social media">
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-twitter-x"></i>
+      </div>
+      <p>Copyright &copy; Instacart 2026</p>
+    </div>
+  </footer>
 
-<div class="stores"> 
-  <div>Food Lion</div>
-  <div>MARTIN'S</div>
-  <div>Kroger</div>
-  <div>Costco</div>
-  <div>Aldi</div>
-</div>
 
-<div class="stores2">
-  <div>Target</div>
-  <div>Food Lion NOW</div>
-  <div>CVS</div>
-  <div>Dollar Tree</div>
-  <div>The Home Depot</div>  
-</div>
- 
+<!-- LOAD BOOTSTRAP JAVASCRIPT - DO NOT DELETE -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- END LOADING BOOTSTRAP JAVASCRIPT -->
 
-</body>
+  </body>
 </html>
