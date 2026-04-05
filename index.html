@@ -30,7 +30,7 @@
 
 <!-- Sticky Header-->
   <header class="top-bar navbar-light" id="mainNav">
-    <button class="navbar-toggler nav-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#topBarMenu" aria-controls="topBarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler nav-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="brand">
@@ -38,7 +38,7 @@
       <h1 class="fw-bolder">instacart</h1>
     </div>
     <input class="search" type="search" placeholder="Search products and stores" aria-label="Search products and stores">
-    <div class="top-right collapse" id="topBarMenu">
+    <div class="top-right">
       <nav class="top-links" aria-label="Primary">
         <a href="#Order">Order</a>
         <a href="#Stores">Stores</a>
@@ -50,6 +50,19 @@
       </div>
     </div>
   </header>
+  <div class="mobile-menu collapse d-md-none" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <nav class="top-links" aria-label="Mobile primary">
+        <a href="#Order" data-bs-toggle="collapse" data-bs-target="#mobileMenu">Order</a>
+        <a href="#Stores" data-bs-toggle="collapse" data-bs-target="#mobileMenu">Stores</a>
+        <a href="#Help" data-bs-toggle="collapse" data-bs-target="#mobileMenu">Help</a>
+      </nav>
+      <div class="auth-buttons">
+        <a class="button1" href="https://www.instacart.com/" target="_blank" rel="noopener noreferrer">Log in</a>
+        <a class="button3" href="https://www.instacart.com/" target="_blank" rel="noopener noreferrer">Sign up</a>
+      </div>
+    </div>
+  </div>
 
 <!--Order/signup-->
 <section id="Order">

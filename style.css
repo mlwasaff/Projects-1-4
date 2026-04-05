@@ -103,8 +103,85 @@ section {
 }
 
 .navbar-toggler {
-  border-color: #c7cfca;
+  border: 1px solid #c7cfca;
+  background: transparent;
+  padding: 6px 8px;
 }
+
+.navbar-toggler-icon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #0b3f2a;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #0b3f2a;
+}
+
+.navbar-toggler-icon::before {
+  top: -6px;
+}
+
+.navbar-toggler-icon::after {
+  top: 6px;
+}
+
+.nav-toggle[aria-expanded="true"] .navbar-toggler-icon {
+  background-color: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .navbar-toggler-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .navbar-toggler-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f7f5f2;
+  color: #003d2a;
+  padding: var(--space-lg) var(--space-lg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+  z-index: 1200;
+}
+
+.mobile-menu-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.mobile-menu .top-links {
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.mobile-menu .auth-buttons {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mobile-menu .button1,
+.mobile-menu .button3 {
+  width: 100%;
+  text-align: center;
+}
+
 
 .site-footer {
   background-color: #f7f5f2;
@@ -325,36 +402,7 @@ section {
     width: calc(100% + 24px);
   }
 
-  .top-right {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .top-links {
-    flex-wrap: wrap;
-  }
-
-  .top-right.collapse {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #f7f5f2;
-    padding: var(--space-lg);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-    z-index: 1100;
-  }
-
   .button2 {
     font-size: 16px;
-  }
-}
-
-@media (min-width: 768px) {
-  .top-right.collapse {
-    display: flex !important;
-    height: auto !important;
-    visibility: visible;
   }
 }
